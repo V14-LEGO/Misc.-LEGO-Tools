@@ -229,7 +229,7 @@ for i in range(len(proj_files)):
     str_jpy = "JPY: "
     jpy_sum = 0.0
     for j in range(len(shop_list)):
-        jpy_each = proj_cost[j][0] * order_cost_jpy[j] / proj_cost[j][1]
+        jpy_each = proj_cost[j][0] * order_cost_jpy[j] / proj_cost[j][1] # proj_cost[j][1]: including shipping cost, proj_cost[j][2]: only parts cost
         jpy_sum += jpy_each
         str_jpy += str(round(jpy_each, 2)) + ", "
     print(str_jpy)
