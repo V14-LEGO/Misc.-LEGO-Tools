@@ -1,17 +1,20 @@
-version = '260409a'
+version = '260409b'
 docstring = '''Rudimentary editor for BrickLink wanted lists.
 
--a, add    : Add parts from a Wanted List or a specified part
--c, clear  : Clear list
--d, div    : Divide the quantity of specified part
--h, help   : Show help
--l, lookup : Open a BrickLink page of the specified part
--m, mul    : Multiply the quantity of specified part
--o, out    : Save to XML file
--p, print  : Print list
--q, quit   : Quit
--r, rm     : Remove a specified part
--s, sub    : Subtract parts from a Wanted List or a specified part
+-a, add        : Add parts from a Wanted List or a specified part
+-c, clear      : Clear list
+-d, div        : Divide the quantity of specified part
+-h, help       : Show help
+-kp, keep      : Remove everything else but the specified part
+-l, lookup     : Open a BrickLink page of the specified part
+-m, mul        : Multiply the quantity of specified part
+-neg, negative : Keep only the parts with negative quantity
+-o, out        : Save to XML file
+-pos, positive : Keep only the parts with positive quantity
+-p, print      : Print list
+-q, quit       : Quit
+-rm, remove    : Remove a specified part
+-s, sub        : Subtract parts from a Wanted List or a specified part
 
 Parts are specified as: [ItemID] [ColorID] [Qty]
 * can be used as wildcard
