@@ -1,15 +1,25 @@
 # WLEdit - BrickLink Studio 用 Wanted List エディター
 BrickLinkで扱っているXML形式パーツリストに簡単な操作ができる、発注関連作業円滑化のために作成したPythonスクリプトです。
 ## 用例
-- パーツを少し多めに頼んで店舗側のミスに備えたいとき：  
+- パーツを少し多めに頼んで店舗側のミスに備えたいとき：
+  
+  パーツリストにパーツを全種類2個ずつ追加  
+  `python wledit.py [old_list.xml] * * 2 -o [new_list.xml]`
+  
+  パーツリストのパーツを4%増加し切り上げ  
   `python wledit.py [old_list.xml] -m 1.04 -o [new_list.xml]`
-- 発注したパーツに何らかのエラーで不足が生じていないか確認したいとき：  
-  `python wledit.py [order1.xml] [order2.xml] [order3.xml] -s [model.xml] -p`  
+  
+- 発注したパーツに何らかのエラーで不足が生じていないか確認したいとき：
+  
+  各ショッピングカートの内容を個々のリストに出力して作品のパーツリストと照会  
+  `python wledit.py [order1.xml] [order2.xml] [order3.xml] -s [model.xml] -p`
+  
+  一定期間の発注内容を一括ダウンロードしたファイルと照会  
   `python wledit.py [orderxml.txt] -s [model.xml] -p`
 ## 使い方
 まずはBrickLinkから最新の色定義を取得しましょう。  
 使い方は単に`python getcolor.py`を実行するだけです。  
-これで色定義がbricklink.jsonに保存されます。
+これで色の名称とIDがbricklink.jsonに保存されます。
 
 次にWLEditの使用法です。  
 使い方は
